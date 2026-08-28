@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="todo-container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+
+            <h1>My To-Do List</h1>
+            <p>Stay organized. Get things done! ✨</p>
+        </div>
+
+
+        <!-- Add Task -->
+        <div class="task-input">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your task..."
+            >
+
+            <button id="addBtn">
+                <i class="fa-solid fa-plus"></i>
+                Add Task
+            </button>
+        </div>
+
+
+        <!-- Filters -->
+        <div class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All <span id="allCount">0</span>
+            </button>
+
+            <button class="filter-btn" data-filter="pending">
+                Pending <span id="pendingCount">0</span>
+            </button>
+
+            <button class="filter-btn" data-filter="completed">
+                Completed <span id="completedCount">0</span>
+            </button>
+
+        </div>
+
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+
+        <!-- Empty Message -->
+        <div id="emptyMessage">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <p>No tasks yet!</p>
+            <span>Add a task to get started 🚀</span>
+        </div>
+
+
+        <!-- Footer Statistics -->
+        <div class="stats">
+
+            <div class="stat">
+                <i class="fa-regular fa-clipboard"></i>
+                <span>Total: <b id="totalTasks">0</b></span>
+            </div>
+
+            <div class="stat">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Completed: <b id="completedTasks">0</b></span>
+            </div>
+
+            <div class="stat">
+                <i class="fa-regular fa-clock"></i>
+                <span>Pending: <b id="pendingTasks">0</b></span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
